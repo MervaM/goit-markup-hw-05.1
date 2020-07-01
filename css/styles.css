@@ -166,6 +166,9 @@ a {
   font-size: 14px;
   line-height: 1.14;
   color: #757575;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  
 }
 
@@ -473,6 +476,9 @@ a {
   justify-content: center; 
   color: #afb1b8;
   background-color: #fff;   
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-picture:hover,
@@ -537,12 +543,16 @@ a {
   border-radius: 4px; 
   align-items: center;
   justify-content: center; 
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumb-logo:hover,
 .thumb-logo:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
+  
 }
 
 .company-logo {
@@ -562,6 +572,7 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   
+  opacity: 1;
 }
 
 .backdrop.is-hidden {
@@ -912,6 +923,9 @@ footer {
   align-items: center;
   justify-content: center; 
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item {
