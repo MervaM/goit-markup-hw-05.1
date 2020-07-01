@@ -52,7 +52,7 @@
     <div class="overlay">
       <section class="hero">
         <h1 class="hero-title">эффективные решения </br> для вашего бизнеса</h1>
-        <a href="" ><button class="button-order" data-open-modal>Заказать услугу</button></a>
+        <a href="" ><button class="button-order" data-modal-open>Заказать услугу</button></a>
       </section>
     </div>
 
@@ -371,39 +371,14 @@
       </ul>
     </section>
 
-    <div class="backdrop is-hidden data-backdrop">
+    <div class="backdrop is-hidden data-modal">
       <div class="modal">
         <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
 
-        <button data-close-modal >Отправить</button>
-
-        
+        <button data-close-modal >Отправить</button>        
       </div>
-
     </div>
-
-    <!-<script>
-      const refs = {
-        openModalBtn: document.quertySelector("[data-open-modal]"),
-        closeModalBtn: document.quertySelector("[data-close-modal["),
-        backdrop: document.querySelector("[data-backdrop]"), 
-      };
-
-      refs.openModalBtn.addEventListener("click", togglemodal);
-      refs.closeModalBtn.addEventListener("click", togglemodal);
-      refs.backdrop.addEventListener("click", logBackdropClick);
-
-      function togglemodal() {
-        refs.backdrop.classList.toggle("is-hidden");
-      }
-
-      function logBackdropClick() {
-        console.log("click in backdrop");
-      }
-
-
-    </script>-->
-
+    
     <!--підвал-->
     <footer class="footer">
       <div class="footer-wrapper container">
@@ -459,5 +434,21 @@
       </div>
       <p class="copyright container">2020 | Developed by GoIT Students</p>
     </footer>
+    <script src="./js/modal.js">
+      (() => {
+      const refs = {
+        openModalBtn: document.querySelector('[data-modal-open]'),
+        closeModalBtn: document.querySelector('[data-modal-close]'),
+        modal: document.querySelector('[data-modal]'),
+      };
+    
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+    
+      function toggleModal() {
+        refs.modal.classList.toggle('is-hidden');
+      }
+    })();
+    </script>
   </body>
 </html>
